@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "base/reset";
+
+body {
+    background-color: $backgroundaccet;
+    color: $text;
+}
+#err {
+    background-color: $backgroundaccet;
+}
+
+header {
+    background-color: $header;
+    padding: 10px;
+    border-radius: 10px;
+}

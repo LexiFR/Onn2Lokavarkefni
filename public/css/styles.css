@@ -1,0 +1,23 @@
+*,
+*::before *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+#err {
+  background-color: black;
+}
+
+header {
+  background-color: rgb(210, 1, 1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */
