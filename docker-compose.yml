@@ -1,11 +1,11 @@
 services:
   db:
     image: postgres:15-alpine
-    container_name: uppskriftavefur_db
+    container_name: ultralive_db
     environment:
-    POSTGRES_USER: postgres
-    POSTGRES_PASSWORD: postgrespassword
-    POSTGRES_DB: uppskriftavefur
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: ultralive
   ports:
     - 5432:5432
   volumes:
