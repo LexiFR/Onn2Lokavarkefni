@@ -5,6 +5,6 @@ const ultrakillController = require('../controllers/ultrakill.controller');
 
 
 router.get('/', ultrakillController.index);
-//router.get('/creature/:id', creaturesController.detail);
+router.get('/enemy/:id', ultrakillController.detail);
 
 module.exports = router;
