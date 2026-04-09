@@ -18,12 +18,49 @@ const getEnemyDetails = async (req, res) => {
             enemy: enemy
         });
     } catch(error) {
-        console.error("Villa vid ad sækja staka uppskrift:", error);
-        res.status(500).send("Kerfisvilla - Get ekki hladid enemies");
+        console.error("Error while getting enemies:", error);
+        res.status(500).send("Server error - cannot load enemies");
     }
 };
 
+
+const getAddEmemyForm = (req, res) => {
+    res.render("add-enemy", {
+        title: "add the enemy"
+    });
+};
+
+const createNewEnemy = async (req, res) => {
+    try {
+        const { title, img_url, type, unlocked, description, strategy } = req.body;
+
+        if (!title) {
+            return res.status(400).send(
+                "Title cannot be empty"
+            );
+        }
+
+        const newEnemy = await ultraService.createEnemy(
+            title,
+            img_url,
+            type,
+            unlocked,
+            description,
+            strategy
+        );
+
+        res.redirect(`/emenies/${newEnemy.id}`);
+    } catch(error) {
+        console.error("Error while trying to create an enemy:", error);
+        res.status(500).send(
+            "Server error - cannot create the enemy"
+        );
+    }
+}
+
 module.exports = {
     index,
-    getEnemyDetails
+    getEnemyDetails,
+    getAddEmemyForm,
+    createNewEnemy
 };

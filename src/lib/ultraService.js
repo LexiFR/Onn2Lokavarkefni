@@ -14,7 +14,22 @@ const getEnemyById = async (id) => {
 
     return result.rows[0];
 };
+
+const createEnemy = async (title, img_url, type, unlocked, description, strategy) => {
+    const sql = `
+        INSERT INTO enemies (title, img_url, type, unlocked, description, strategy)
+        VALUES ($1, $2, $3)
+        RETURNING *;
+    `;
+
+    const values = [title, img_url, type, unlocked, description, strategy];
+    const result = await db.query(sql, values);
+
+    return result.rows[0];
+}
+
 module.exports = {
     getAllEnemies,
-    getEnemyById
+    getEnemyById,
+    createEnemy
 }
