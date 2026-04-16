@@ -1,4 +1,4 @@
-const { Pool } = requrie("pg");
+const { Pool } = require("pg");
 
 const DBString = process.env.DATABASE_URL;
 
