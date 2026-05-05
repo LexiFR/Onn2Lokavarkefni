@@ -13,7 +13,7 @@ const getEnemyDetails = async (req, res) => {
             return res.status(404).send("Vro got killed by Muga Ryoshu")
         }
 
-        res.render("recipe-details", {
+        res.render("enemy-details", {
             title: enemy.title,
             enemy: enemy
         });

@@ -20,4 +20,34 @@ header {
   border-radius: 10px;
 }
 
+#hdrImg {
+  width: 5%;
+}
+
+#light {
+  background-color: rgb(45, 45, 45);
+  border-radius: 10px;
+}
+
+button {
+  background-image: linear-gradient(to bottom, rgb(71, 71, 71), black);
+  color: white;
+  border-radius: 10px;
+  border-color: rgb(24, 24, 24);
+  border-width: 5px;
+}
+
+.major, #back {
+  min-width: 20%;
+  min-height: 10px;
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.major {
+  padding: 20px;
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=styles.css.map */

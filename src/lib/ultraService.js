@@ -1,4 +1,4 @@
-const db = require("../lib/db");
+const db = require("./db");
 
 const getAllEnemies =  async () => {
     const result = await db.query("SELECT * FROM Enemies ORDER BY id ASC");

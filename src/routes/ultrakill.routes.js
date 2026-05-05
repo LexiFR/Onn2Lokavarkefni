@@ -10,6 +10,6 @@ router.post("/enemies/new", ultrakillController.createNewEnemy);
 router.get("/enemies/:id", ultrakillController.getEnemyDetails);
 
 router.get('/', ultrakillController.index);
-//router.get('/enemy/:id', ultrakillController.detail);
+
 
 module.exports = router;
