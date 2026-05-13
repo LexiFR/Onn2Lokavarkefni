@@ -1,24 +1,40 @@
 <%- include('partials/header') %>
 
-<section id="light">
+    <section id="light">
+        <nav>
+            <button class="major">Weapons</button><br>
 
-    <button class="major">Weapons</button><br>
+            <button class="major">Enemies</button>
 
-    <button class="major">Enemies</button><br>
+            <button class="major">The Cyber Grind</button><br>
 
-    <button class="major">The Cyber Grind</button><br>
+            <button class="major">Sandbox</button><br>
 
-    <button class="major">Sandbox</button><br>
+            <button id="back">Back</button>
+        </nav>
+    </section>
 
-    <button id="back">Back</button>
-
-
-    <div>
-        <p>
-            it doesnt work but atleast it looks pretty
-        </p>
-    </div>
-
-</section>
+    <section>
+        <div>
+            <h3>Enemies</h3>
+            <div>
+                <% if (Enemies && Enemies.length > 0) { %>
+                    <% Enemies.forEach(enemy => { %>
+                        <div>
+                            <div></div>
+                            <div>
+                                <h4><%= enemy.title %></h4>
+                                <p><%= enemy.type %></p>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <div>
+                        <h4>No enemies found</h4>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
 
 <%- include('partials/footer') %>

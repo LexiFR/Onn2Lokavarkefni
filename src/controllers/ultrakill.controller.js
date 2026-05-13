@@ -1,7 +1,8 @@
 const ultraService = require('../lib/ultraService');
 
 async function index(req, res) {
-    res.render('index', {title: "Ts might be the terminal"});
+    const Enemies = await ultraService.getAllEnemies()
+    res.render('index', {title: "Ts might be the terminal", Enemies});
 };
 
 const getEnemyDetails = async (req, res) => {

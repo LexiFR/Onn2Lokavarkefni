@@ -4,11 +4,11 @@ services:
     container_name: ultralive_db
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgrespassword
+      "POSTGRES_PASSWORD": "postgrespassword"
       POSTGRES_DB: ultralive
-  ports:
-    - 5432:5432
-  volumes:
+    ports:
+    - "5432:5432"
+    volumes:
     - pgdata:/var/lib/postgresql/data
     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
