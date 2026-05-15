@@ -8,7 +8,7 @@ if (!DBString) {
 }
 
 const pool = new Pool({
-    DBString
+    connectionString: DBString
 });
 
 pool.on('error', (err) => {
